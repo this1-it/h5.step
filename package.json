@@ -1,0 +1,29 @@
+{
+  "name": "h5.step",
+  "version": "0.0.0",
+  "description": "Flow control for node.js and the browser.",
+  "keywords": ["h5", "step", "flow", "async"],
+  "license": "MIT",
+  "homepage": "https://github.com/morkai/h5.step",
+  "author": {
+    "name": "Łukasz Walukiewicz",
+    "email": "lukasz@walukiewicz.eu",
+    "url": "http://lukasz.walukiewicz.eu/"
+  },
+  "repository": {
+    "type": "git",
+    "url":  "http://github.com/morkai/h5.step.git"
+  },
+  "engine": ["node >=0.8"],
+  "main": "./lib/index",
+  "devDependencies": {
+    "mocha": "1.7.x",
+    "should": "1.2.x",
+    "istanbul": "0.1.x",
+    "requirejs": "2.1.x"
+  },
+  "scripts": {
+    "test": "istanbul test --root ./lib ./node_modules/mocha/bin/_mocha",
+    "amd": "r.js -convert lib/ lib-amd/h5.step/"
+  }
+}
