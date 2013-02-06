@@ -42,7 +42,7 @@ one cannot call `done()` and then `next()` in the same step function.
 For example, this is invalid (`done()` AND `next()` are called):
 
 ```js
-stepN()
+function stepN()
 {
   this.done();
   this.next();
@@ -52,7 +52,7 @@ stepN()
 But this is allowed (`done()` OR `next()` is called):
 
 ```js
-stepN(err)
+function stepN(err)
 {
   if (err)
   {
