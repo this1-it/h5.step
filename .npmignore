@@ -1,0 +1,6 @@
+coverage/
+lib-amd/
+node_modules/
+test/
+.gitignore
+.npmignore
