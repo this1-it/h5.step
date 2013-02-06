@@ -596,6 +596,34 @@ describe("step", function()
       testWith('group').should.throw();
     });
 
+    it("should work with single synchronous callback", function(done)
+    {
+      step(
+        function step1()
+        {
+          this.parallel()();
+        },
+        function step2()
+        {
+          done();
+        }
+      );
+    });
+
+    it("should work with single asynchronous callback", function(done)
+    {
+      step(
+        function step1()
+        {
+          setTimeout(this.parallel(), 1);
+        },
+        function step2()
+        {
+          done();
+        }
+      );
+    });
+
     it("should go to the next step if every callback is resolved synchronously", function(done)
     {
       step(
@@ -708,6 +736,34 @@ describe("step", function()
       testWith('parallel').should.throw();
     });
 
+    it("should work with single synchronous callback", function(done)
+    {
+      step(
+        function step1()
+        {
+          this.group()();
+        },
+        function step2()
+        {
+          done();
+        }
+      );
+    });
+
+    it("should work with single asynchronous callback", function(done)
+    {
+      step(
+        function step1()
+        {
+          setTimeout(this.group(), 1);
+        },
+        function step2()
+        {
+          done();
+        }
+      );
+    });
+
     it("should go to the next step if every callback is resolved synchronously", function(done)
     {
       step(
@@ -781,9 +837,9 @@ describe("step", function()
       step(
         function step1()
         {
-          setTimeout(this.group(), 40, null, 1);
+          setTimeout(this.group(), 25, null, 1);
           this.group()(null, 2);
-          setTimeout(this.group(), 20, null, 3);
+          setTimeout(this.group(), 15, null, 3);
           this.group()(null, 4);
         },
         function step2()
