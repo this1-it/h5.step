@@ -1,6 +1,6 @@
 {
   "name": "h5.step",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Flow control for node.js and the browser.",
   "keywords": ["h5", "step", "flow", "async"],
   "license": "MIT",
