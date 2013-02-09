@@ -1,4 +1,4 @@
 language: node_js
 node_js:
   - 0.8.x
-script: "./node_modules/.bin/istanbul test --root ./lib ./node_modules/mocha/bin/_mocha --coverage -- -R spec"
+script: "./node_modules/.bin/istanbul cover --root ./lib ./node_modules/mocha/bin/_mocha -- -R spec"
