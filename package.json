@@ -2,12 +2,7 @@
   "name": "h5.step",
   "version": "0.1.0",
   "description": "Flow control for node.js and the browser.",
-  "keywords": [
-    "h5",
-    "step",
-    "flow",
-    "async"
-  ],
+  "keywords": ["h5", "step", "flow", "async"],
   "license": "MIT",
   "homepage": "https://github.com/morkai/h5.step",
   "author": {
@@ -15,13 +10,12 @@
     "email": "lukasz@walukiewicz.eu",
     "url": "http://lukasz.walukiewicz.eu/"
   },
+  "bugs": "https://github.com/morkai/h5.step/issues",
   "repository": {
     "type": "git",
     "url": "http://github.com/morkai/h5.step.git"
   },
-  "engine": [
-    "node >=0.8"
-  ],
+  "engine": ["node >=0.8"],
   "main": "./lib/index",
   "devDependencies": {
     "requirejs": "2.1.x",
