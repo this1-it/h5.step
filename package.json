@@ -26,6 +26,7 @@
   "devDependencies": {
     "requirejs": "2.1.x",
     "grunt": "0.4.x",
+    "grunt-cli": "0.1.x",
     "grunt-contrib-clean": "git://github.com/gruntjs/grunt-contrib-clean.git#a6b2940430",
     "grunt-contrib-jshint": "0.1.x",
     "grunt-simple-mocha": "0.3.x",
