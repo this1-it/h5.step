@@ -106,7 +106,12 @@ And then run the `amd` script:
 npm run-script amd
 ```
 
-Copy the `lib-amd/h5.step/` directory to your project.
+*__NOTE__ If you're on Windows and instead of building the AMD version,
+the `r.js` file is opened in Notepad, you'll have to delete the
+`.\node_modules\.bin\r.js` (not `.\node_modules\.bin\r.js.cmd`) file
+and try again.*
+
+Copy the resulting `build/amd/h5.step/` directory to your project.
 
 ## API
 
@@ -327,6 +332,14 @@ To run the tests, clone the repository:
 git clone git://github.com/morkai/h5.step.git
 ```
 
+Make sure [Grunt](http://gruntjs.com/) is installed globally:
+(if not, then check out the Grunt's
+[Getting Started guide](https://github.com/gruntjs/grunt/wiki/Getting-started)).
+
+```
+grunt -V
+```
+
 Install the development dependencies:
 
 ```
@@ -334,20 +347,12 @@ cd h5.step/
 npm install
 ```
 
-And execute the `test` script:
+And execute the `grunt test` command.
 
-```
-npm test
-```
-
-To also generate the code coverage report, include the `--coverage` argument:
-
-```
-npm test --coverage
-```
-
-The coverage report will be generated to `coverage/` directory and can be viewed
-in the browser by opening the `h5.step/coverage/lcov-report/index.html` file.
+To generate the code coverage report, execute the `grunt coverage` command.
+A detailed code coverage report will be generated in the `build/coverage/`
+directory and can be viewed in the browser by opening the
+`build/coverage/lcov-report/index.html` file.
 
 ## License
 

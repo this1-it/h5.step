@@ -1,6 +1,5 @@
 .idea/
-coverage/
-lib-amd/
+build/
 node_modules/
 test/
 .gitignore

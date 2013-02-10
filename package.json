@@ -2,7 +2,12 @@
   "name": "h5.step",
   "version": "0.1.0",
   "description": "Flow control for node.js and the browser.",
-  "keywords": ["h5", "step", "flow", "async"],
+  "keywords": [
+    "h5",
+    "step",
+    "flow",
+    "async"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/morkai/h5.step",
   "author": {
@@ -12,18 +17,23 @@
   },
   "repository": {
     "type": "git",
-    "url":  "http://github.com/morkai/h5.step.git"
+    "url": "http://github.com/morkai/h5.step.git"
   },
-  "engine": ["node >=0.8"],
+  "engine": [
+    "node >=0.8"
+  ],
   "main": "./lib/index",
   "devDependencies": {
-    "mocha": "1.7.x",
-    "should": "1.2.x",
-    "istanbul": "0.1.x",
-    "requirejs": "2.1.x"
+    "requirejs": "2.1.x",
+    "grunt": "0.4.x",
+    "grunt-contrib-clean": "git://github.com/gruntjs/grunt-contrib-clean.git#a6b2940430",
+    "grunt-contrib-jshint": "0.1.x",
+    "grunt-simple-mocha": "0.3.x",
+    "grunt-istanbul": "git://github.com/morkai/grunt-istanbul.git#multiple-reporters",
+    "grunt-env": "git://github.com/onehealth/grunt-env.git#0.4.0"
   },
   "scripts": {
-    "test": "istanbul test --root ./lib ./node_modules/mocha/bin/_mocha",
-    "amd": "r.js -convert lib/ lib-amd/h5.step/"
+    "test": "grunt",
+    "amd": "r.js -convert lib/ build/lib-amd/h5.step/"
   }
 }

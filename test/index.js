@@ -1,5 +1,10 @@
+/*jshint maxlen:999*/
+/*global describe:false,it:false*/
+
+'use strict';
+
 var should = require('should');
-var step = require('../lib');
+var step = require(process.env.LIB_FOR_TESTS_DIR || '../lib');
 
 /**
  * Returns the `arguments` as an `Array`.
@@ -82,7 +87,7 @@ describe("step", function()
     step(
       function step1()
       {
-
+        actual = actual;
       },
       function step2()
       {
@@ -134,7 +139,7 @@ describe("step", function()
     }
 
     test.should.throw();
-    visited.should.be.eql([1, 2])
+    visited.should.be.eql([1, 2]);
   });
 
   it("should have the same context across all steps", function()
@@ -520,7 +525,7 @@ describe("step", function()
         {
           this.done(assert, 1, 2, 3, 4);
         }
-      )
+      );
     });
 
     it("should not execute the remaining steps", function()
