@@ -2,7 +2,6 @@
 
 Flow control for node.js and the browser.
 
-[![Build Status](https://travis-ci.org/morkai/h5.step.png?branch=master)](https://travis-ci.org/morkai/h5.step)
 
 ## Installation
 
